@@ -1,0 +1,44 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+
+header {
+   height: 123px;
+   position: relative;
+}
+
+.nav-top {
+   justify-content: end;
+   font-size: 12px;
+   display: flex;
+   padding-top: 30px;
+   margin-right: 60px;
+}
+
+.ico {
+   width: 20px;
+   height: 20px;
+   padding-right: 10px;
+}
+
+.space {
+   padding-right: 18px;
+   padding-left: 10px;
+}
+
+.nav-bar {
+   width: 100%;
+   font-size: 14px;
+   justify-content: space-around;
+   display: flex;
+}
+
+.logo {
+   width: 194px;
+}
+
+.bar {
+   padding-top: 40px;
+}
