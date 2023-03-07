@@ -7,13 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="./style.css"/>
 <title>빽다방</title>
 </head>
 <body>
   <header>
     <nav class="label">
-      
       <div class="nav-top">
             <a>더본코리아</a>
             <div class="space">|</div>
@@ -21,7 +24,8 @@
             <img src="./img/insta-ico.png" class="ico"></img>
       </div>
       <div class="nav-bar"> 
-            <div><a><img src="./img/logo.png" class="logo"></img></a></div>
+            <div><a><img src="./img/logo.png" id="logo"></img></a></div>
+            <div><a><img src="./img/logo.png" id="logo_hidden"></img></a></div>
             <div class="bar">빽다방</div>
             <div class="bar">메뉴</div>
             <div class="bar">소식</div>
@@ -29,26 +33,94 @@
             <div class="bar">매장안내</div>
             <div class="bar">창업안내</div>
             <div class="bar">고객의 소리</div>
-            
+    
       </div> 
     </nav>
 
   </header>
-  <main>
-    <!-- <div class="banner">
-      <img class="inner img1"><img src="./img/bannerimg1.jpg"></img></div>
-      <img class="inner img2"><img src="./img/bannerimg2.jpg"></img></div>
-      <img class="inner img3"><img src="./img/bannerimg3.jpg"></img></div>
-      <img class="inner img4"><img src="./img/bannerimg4.jpg"></img></div>
-    </div> -->
-    <div><img src="./img/main_sec1.jpg"/></div>
-    <div><img src="./img/main_sec2.jpg"/></div>
-    <div><img src="./img/main_sec3.jpg"/></div>
-    <div><img src="./img/main_sec4.jpg"/></div>
-    <div></div>
-    <div></div>
-    <div><img></img></div>
+    <!---배너 이미지(움직이면 이미지 변환)-->
+    <!-- <input type="radio" id="tab1" checked>
+    <input type="radio" id="tab2">
+    <input type="radio" id="tab3">
+    <input type="radio" id="tab4"> -->
+    <div class = "section">
+      <div class="slide">
+        <div class="slide-inner">
+          <a href="#"><img src="./img/bannerimg1.jpg"></img></a>
+          <!-- <a href="#"><img src="./img/bannerimg2.jpg"></img></a>
+          <a href="#"><img src="./img/bannerimg3.jpg"></img></a>
+          <a href="#"><img src="./img/bannerimg4.jpg"></img></a> -->
+        </div>
+      </div>
+    </div>
+
+    <!--section1 PAIK'S COFFEE STORY-->
+   <div id = section1>
+        <img src="./img/main_sec1.jpg"/>
+        <dl>
+          <dt>The Finest Quality Coffee Plants</dt>
+          <dd>PAIK'S COFFEE STORY</dd>
+          <div>균형잡힌 바디감으로 긴 여운을 
+          남기는 빽다방 커피를 만나보세요.</div>
+        </dl>
+        <button class="plus_btn"><span>+</span><button>
+   </div>
+
+   <!--section2 FRESH COFFE-->
+    <div id="section2">
+        <img src="./img/main_sec2.jpg"/>
+        <dl>
+          <dd>FRESH COFFE</dd>
+          <div>신선한 뉴크롭 원두를 
+            사용하여 <br>추출한 커피메뉴</div>
+          <button class="sec2 plus_btn"><span>+</span></button>
+        </dl>
+    </div>
+      <!--section3 VARIOUS BEVERAGE-->
+    <div id="section3">
+      <div id="left">
+        <dl>
+          <dd>VARIOUS BEVERAGE</dd>
+          <div>에이드, 티, 주스 등 취향대로<br> 골라 먹는 즐거움</div>
+          <button class="sec3 plus_btn"><span>+</span><button>
+        </dl>
+      </div>
+      <!--section3 SWEET PAIK'S CCINO-->
+      <div id = "right">
+        <dl>
+          <dd>SWEET PAIK'S CCINO</dd>
+          <div>달콤 시원한 빽다방 시그니처 메뉴!</div>
+          <button class="sec3 plus_btn"><span>+</span><button>
+        </dl>
+      </div>
+    </div>
   </main>
+  <div id="section4">
+    <!--STORE-->
+    <div class="box_left">
+          <div id="store">
+            <div>STORE</div>
+            <div>원하는 지역의 매장을 검색해보세요!</div>
+            <div><input type="text" placeholder="Find a store in your area!">
+            <img src="./img/search-ico.png"></div>
+          </div>
+
+      <!--FRANCHISE-->
+          <div id="franchise">
+            <div>FRANCHISE</div>
+            <div>빽다방 창업안내를 도와드리겠습니다.</div>
+            <button><image src="./img/store-ico.png"></button>
+          </div>
+      </div>
+    <div class="box_right">
+      <img src="./img/mmain_sec5.jpg">
+      <dl>
+        <dd>TASTY ICE CREAM / <br>DESSERT</dd>
+        <div>달콤한 아이스크림부터 <br>든든한 브레드까지!</div>
+      </dl>
+      <button class="sec plus_btn"><span>+</span></button>
+    </div>
+  </div>
   <footer>
     <div>PAIK’S COFFEE SNS</div>
     <div>#빽다방#빽다방신메뉴#빽다방이벤트</div>

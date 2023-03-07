@@ -1,44 +1,207 @@
-body {
+* {
    margin: 0;
    padding: 0;
-   font-family: 'Noto Sans KR', sans-serif;
+   border: 0;
+   font-family: 'Montserrat','Noto Sans KR',sans-serif;
 }
+/*이미지 사이의 공백 없애기*/
+img {
+   vertical-align: bottom;
+     vertical-align: top;
+ }
+ /*폰트 섹션 두꺼운 글씨*/
+ dd{font-family: 'Noto Sans', sans-serif;
+   font-weight: 1000;
+   font-size:55px;}
+
+/*플러스버튼*/
+.plus_btn{
+   position:absolute;
+   font-size:40px;
+   font-weight: 800;
+   background-color: white;
+   border-radius: 50%;
+   height:50px;
+   width: 50px;
+   /* text-align: center; */
+   left:70px;
+   /*버튼 그림자 속성*/
+   box-shadow: 2px 2px 2px 2px rgb(179, 179, 179,0.2);
+}
+.plus_btn span{
+   position:absolute;
+   top:-6px;
+   left:15px;
+}
+/*헤더*/
 
 header {
    height: 123px;
    position: relative;
 }
-
+nav{
+   /*nav고정*/
+   position:fixed ;
+   width:100%;
+   background-color: white;
+   /*nav가 가장 먼저 나오게 우선순위1*/
+   z-index:100;
+}
 .nav-top {
    justify-content: end;
    font-size: 12px;
    display: flex;
-   padding-top: 30px;
-   margin-right: 60px;
-}
-
+   padding-top: 25px;
+   margin-right: 180px;
+   margin-bottom:20px;}
 .ico {
    width: 20px;
    height: 20px;
    padding-right: 10px;
 }
-
+#logo{
+   position:absolute;
+   top:30px;
+   left:200px;
+}
+#logo_hidden{
+   visibility: hidden;
+}
 .space {
    padding-right: 18px;
    padding-left: 10px;
 }
-
 .nav-bar {
-   width: 100%;
    font-size: 14px;
+   padding-left:150px;
+   padding-right:150px;
    justify-content: space-around;
    display: flex;
+   font-weight: 600;
+}
+.slide img{
+   width:100%;
 }
 
-.logo {
-   width: 194px;
+/*section1 PAIK'S COFFEE STORY*/
+#section1 {
+   height:300px;
+}
+#section1 img{
+   height:100%;
+   width: 100%;
+   position:relative;
+}
+/*section1 텍스트*/
+#section1 dl{
+   position:absolute;
+   top:650px;
+   padding-left:70px;
+}
+#section1 .plus_btn{
+   top:830px;
 }
 
-.bar {
-   padding-top: 40px;
+/*section2 FRESH COFFE*/
+#section2{
+   position:relative;
+   /*모든 섹션에 relative를 줌.위에 text정렬은 absolute*/
+}
+#section2 .plus_btn{
+   top:300px;
+}
+
+#section2 img{
+   width:100%;
+}
+/*section2 텍스트*/
+#section2 dl{   
+   position:absolute;
+   top:70px;
+   padding-left:70px;}
+
+/*section3,4 좌/우 사진 정렬*/
+#left{
+   float:left;
+}
+#right{
+   float:right;
+}
+/*section3(left) : VARIOUS BEVERAGE*/
+/*section3(right) : SWEET PAIK'S CCINO*/
+
+#section3{
+   height:400px;
+   width:100%;
+   position:relative;
+}
+#left{
+   background-image:url(./img/main_sec3.jpg);
+   /*배경이미지 비율 맞추기*/
+   background-size: cover;
+   height:400px;
+   width:60%
+}
+#right{
+   background-image:url(./img/main_sec4.jpg);
+   /*배경이미지 비율 맞추기*/
+   background-size: cover;
+   height:400px;
+   width:40%
+}
+
+#section3 .plus_btn{
+   position:absolute;
+   top:250px;
+}
+/*section3 텍스트*/
+#section3 dl{
+   position:absolute;
+   top:70px;
+   padding-left:70px;
+}
+
+/*section4*/
+#section4{
+   position:relative;
+   height:200px;
+   width:100%;
+   display:flex;
+   margin-top:15px;
+
+}
+.box_right{
+   display:relative;
+}
+/*왼쪽 store/franchise 파란색 박스*/
+.box_right img{
+   position:absolute;
+   width:850px;
+   height:555px;
+   right:0;
+}
+#store{
+   border:2px solid rgb(13, 13, 79);
+   margin-left:150px;
+   margin-bottom:10px;
+   height:270px;
+   width:460px;
+}
+#franchise{
+   border:2px solid rgb(13, 13, 79);
+   margin-left:150px;
+   margin-bottom:10px;
+   margin-top:10px;
+   height:270px;
+}
+/*오른쪽 TASTY ICE CREAM DESSERT*/
+#section4 dl{
+   position:absolute;
+   top:70px;
+   padding-left:70px;
+}
+#section4 .plus_btn{
+   position:absolute;
+   top:450px;
+   left:700px;
 }
