@@ -2,36 +2,42 @@
    margin: 0;
    padding: 0;
    border: 0;
-   font-family: 'Montserrat','Noto Sans KR',sans-serif;
+   font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+/* footer-위치잡기위한 */
+body {
+   position: relative;
 }
 /*이미지 사이의 공백 없애기*/
 img {
    vertical-align: bottom;
-     vertical-align: top;
- }
- /*폰트 섹션 두꺼운 글씨*/
- dd{font-family: 'Noto Sans', sans-serif;
+   vertical-align: top;
+}
+/*폰트 섹션 두꺼운 글씨*/
+dd {
+   font-family: 'Noto Sans', sans-serif;
    font-weight: 1000;
-   font-size:55px;}
+   font-size: 55px;
+}
 
 /*플러스버튼*/
-.plus_btn{
-   position:absolute;
-   font-size:40px;
+.plus_btn {
+   position: absolute;
+   font-size: 40px;
    font-weight: 800;
    background-color: white;
    border-radius: 50%;
-   height:50px;
+   height: 50px;
    width: 50px;
    /* text-align: center; */
-   left:70px;
+   left: 70px;
    /*버튼 그림자 속성*/
-   box-shadow: 2px 2px 2px 2px rgb(179, 179, 179,0.2);
+   box-shadow: 2px 2px 2px 2px rgb(179, 179, 179, 0.2);
 }
-.plus_btn span{
-   position:absolute;
-   top:-6px;
-   left:15px;
+.plus_btn span {
+   position: absolute;
+   top: -6px;
+   left: 15px;
 }
 /*헤더*/
 
@@ -39,13 +45,13 @@ header {
    height: 123px;
    position: relative;
 }
-nav{
+nav {
    /*nav고정*/
-   position:fixed ;
-   width:100%;
+   position: fixed;
+   width: 100%;
    background-color: white;
    /*nav가 가장 먼저 나오게 우선순위1*/
-   z-index:100;
+   z-index: 100;
 }
 .nav-top {
    justify-content: end;
@@ -53,18 +59,19 @@ nav{
    display: flex;
    padding-top: 25px;
    margin-right: 180px;
-   margin-bottom:20px;}
+   margin-bottom: 20px;
+}
 .ico {
    width: 20px;
    height: 20px;
    padding-right: 10px;
 }
-#logo{
-   position:absolute;
-   top:30px;
-   left:200px;
+#logo {
+   position: absolute;
+   top: 30px;
+   left: 200px;
 }
-#logo_hidden{
+#logo_hidden {
    visibility: hidden;
 }
 .space {
@@ -73,135 +80,268 @@ nav{
 }
 .nav-bar {
    font-size: 14px;
-   padding-left:150px;
-   padding-right:150px;
+   padding-left: 150px;
+   padding-right: 150px;
    justify-content: space-around;
    display: flex;
    font-weight: 600;
 }
-.slide img{
-   width:100%;
+.slide img {
+   width: 100%;
 }
 
 /*section1 PAIK'S COFFEE STORY*/
 #section1 {
-   height:300px;
+   height: 300px;
 }
-#section1 img{
-   height:100%;
+#section1 img {
+   height: 100%;
    width: 100%;
-   position:relative;
+   position: relative;
 }
 /*section1 텍스트*/
-#section1 dl{
-   position:absolute;
-   top:650px;
-   padding-left:70px;
+#section1 dl {
+   position: absolute;
+   top: 650px;
+   padding-left: 70px;
 }
-#section1 .plus_btn{
-   top:830px;
+#section1 .plus_btn {
+   top: 830px;
 }
 
 /*section2 FRESH COFFE*/
-#section2{
-   position:relative;
+#section2 {
+   position: relative;
    /*모든 섹션에 relative를 줌.위에 text정렬은 absolute*/
 }
-#section2 .plus_btn{
-   top:300px;
+#section2 .plus_btn {
+   top: 300px;
 }
 
-#section2 img{
-   width:100%;
+#section2 img {
+   width: 100%;
 }
 /*section2 텍스트*/
-#section2 dl{   
-   position:absolute;
-   top:70px;
-   padding-left:70px;}
+#section2 dl {
+   position: absolute;
+   top: 70px;
+   padding-left: 70px;
+}
 
 /*section3,4 좌/우 사진 정렬*/
-#left{
-   float:left;
+#left {
+   float: left;
 }
-#right{
-   float:right;
+#right {
+   float: right;
 }
 /*section3(left) : VARIOUS BEVERAGE*/
 /*section3(right) : SWEET PAIK'S CCINO*/
 
-#section3{
-   height:400px;
-   width:100%;
-   position:relative;
+#section3 {
+   height: 400px;
+   width: 100%;
+   position: relative;
 }
-#left{
-   background-image:url(./img/main_sec3.jpg);
+#left {
+   background-image: url(./img/main_sec3.jpg);
    /*배경이미지 비율 맞추기*/
    background-size: cover;
-   height:400px;
-   width:60%
+   height: 400px;
+   width: 60%;
 }
-#right{
-   background-image:url(./img/main_sec4.jpg);
+#right {
+   background-image: url(./img/main_sec4.jpg);
    /*배경이미지 비율 맞추기*/
    background-size: cover;
-   height:400px;
-   width:40%
+   height: 400px;
+   width: 40%;
 }
 
-#section3 .plus_btn{
-   position:absolute;
-   top:250px;
+#section3 .plus_btn {
+   position: absolute;
+   top: 250px;
 }
 /*section3 텍스트*/
-#section3 dl{
-   position:absolute;
-   top:70px;
-   padding-left:70px;
+#section3 dl {
+   position: absolute;
+   top: 70px;
+   padding-left: 70px;
 }
 
 /*section4*/
-#section4{
-   position:relative;
-   height:200px;
-   width:100%;
-   display:flex;
-   margin-top:15px;
-
+#section4 {
+   position: relative;
+   height: 200px;
+   width: 100%;
+   display: flex;
+   margin-top: 15px;
 }
-.box_right{
-   display:relative;
+.box_right {
+   display: relative;
 }
 /*왼쪽 store/franchise 파란색 박스*/
-.box_right img{
-   position:absolute;
-   width:850px;
-   height:555px;
-   right:0;
+.box_right img {
+   position: absolute;
+   width: 850px;
+   height: 555px;
+   right: 0;
 }
-#store{
-   border:2px solid rgb(13, 13, 79);
-   margin-left:150px;
-   margin-bottom:10px;
-   height:270px;
-   width:460px;
+#store {
+   border: 2px solid rgb(13, 13, 79);
+   margin-left: 150px;
+   margin-bottom: 10px;
+   height: 270px;
+   width: 460px;
 }
-#franchise{
-   border:2px solid rgb(13, 13, 79);
-   margin-left:150px;
-   margin-bottom:10px;
-   margin-top:10px;
-   height:270px;
+#franchise {
+   border: 2px solid rgb(13, 13, 79);
+   margin-left: 150px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+   height: 270px;
+   position: relative;
 }
 /*오른쪽 TASTY ICE CREAM DESSERT*/
-#section4 dl{
-   position:absolute;
-   top:70px;
-   padding-left:70px;
+#section4 dl {
+   position: absolute;
+   top: 70px;
+   padding-left: 70px;
 }
-#section4 .plus_btn{
-   position:absolute;
-   top:450px;
-   left:700px;
+#section4 .plus_btn {
+   position: absolute;
+   top: 450px;
+   left: 700px;
+}
+/* store 크기와 위치 */
+.store-t {
+   padding-left: 40px;
+   padding-top: 30px;
+   padding-bottom: 5px;
+   font-weight: 600;
+   font-size: 40px;
+   font-family: 'Noto Sans', sans-serif;
+   color: rgb(19, 19, 102);
+}
+.store-m {
+   padding-left: 40px;
+}
+.input-box {
+   border: 2px solid black;
+   border-radius: 4px;
+   display: inline-block;
+   margin-left: 40px;
+   margin-top: 80px;
+   padding-left: 20px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.input-box img {
+   width: 20px;
+   padding-left: 80px;
+   padding-right: 16px;
+}
+/* franchise 위치와 크기 */
+.franchise-t {
+   padding-left: 40px;
+   padding-top: 30px;
+   font-size: 40px;
+   font-family: 'Noto Sans', sans-serif;
+   color: rgb(19, 19, 100);
+}
+.franchise-m {
+   padding-left: 40px;
+   padding-top: 5px;
+}
+.franchise-img {
+   position: absolute;
+   width: 50%;
+   right: 0;
+   bottom: 0;
+}
+.franchiseStore-btn {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: white;
+   box-shadow: 2px 2px 2px 2px rgb(179, 179, 179, 0.2);
+   position: absolute;
+   bottom: 40px;
+   left: 40px;
+}
+.franchiseStore-img {
+   width: 25px;
+}
+/*아래쪽 sns icon 위치 */
+#sns-info {
+   position: absolute;
+   top: 620px;
+   left: 600px;
+}
+/* 아래쪽 sns 폰트 크기와 위치 */
+.sns-t {
+   font-size: 30px;
+}
+.sns-m-box {
+   display: flex;
+}
+.sns-m {
+   padding-right: 15px;
+}
+.sns-border {
+   border-top: 1px solid black;
+   width: 50px;
+   height: 2px;
+   margin-left: 100px;
+   margin-top: 30px;
+}
+.sns-ico-box {
+   padding-left: 75px;
+   margin-top: 25px;
+}
+.sns-ico {
+   width: 35px;
+   padding-left: 10px;
+}
+
+footer {
+   position: absolute;
+   position: relative;
+   bottom: -650px;
+   width: 100%;
+   border-top: 3px solid rgb(255, 241, 52);
+}
+/* 로고와 바로가기 링크 */
+.footer-ico {
+   width: 180px;
+   margin-left: 650px;
+   margin-top: 30px;
+}
+.familySiteLink {
+   border: 1px solid black;
+   font-size: 12px;
+   padding-left: 10px;
+   padding-right: 50px;
+   position: absolute;
+   right: 150px;
+   top: 30px;
+}
+/*footer에 적은 회사 정보 */
+.office-info {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 600px;
+   padding-left: 450px;
+   font-size: 13px;
+   padding-top: 30px;
+}
+.office-info div {
+   padding-right: 30px;
+   padding-bottom: 2px;
+}
+.office-born {
+   text-align: center;
+   padding: 50px;
+   font-size: 13px;
 }
