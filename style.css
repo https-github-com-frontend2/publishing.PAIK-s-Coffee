@@ -13,11 +13,21 @@ img {
    vertical-align: bottom;
    vertical-align: top;
 }
+a{
+   text-decoration: none;
+}
+li{
+   list-style: none;
+}
 /*폰트 섹션 두꺼운 글씨*/
 dd {
    font-family: 'Noto Sans', sans-serif;
    font-weight: 1000;
    font-size: 55px;
+}
+dl div{
+   font-size: 18px;
+   font-weight: 700;
 }
 
 /*플러스버튼*/
@@ -71,6 +81,9 @@ nav {
    top: 30px;
    left: 200px;
 }
+#logo:hover{
+   cursor:pointer;
+}
 #logo_hidden {
    visibility: hidden;
 }
@@ -87,26 +100,62 @@ nav {
    font-weight: 600;
 }
 .slide img {
-   width: 100%;
+   width:100%;
+}
+.bar:hover{
+   cursor: pointer;
+}
+/*슬라이드 배너*/
+.container{
+   width:400vw;
+   transition: transform 0.5s;
+}
+/* .banner{
+   /* position:relative; */
+.button_container{
+   color: rgb(208, 208, 208);
+   position: absolute;
+   top:500px;
+   left:650px;
+   /* margin:0 auto; */
+   z-index: 1000;
+   }
+
+.button_container button{
+   border-radius: 50%;
+   height:10px;
+   width:10px;
+   margin:10px;
+   color:white;
 }
 
+.hidden{
+   overflow:hidden;
+}
+.inner{
+   width:100vw;
+   float:left;
+}
+.inner img {
+   width:100vw;
+}
 /*section1 PAIK'S COFFEE STORY*/
 #section1 {
    height: 300px;
+   position: relative;
 }
 #section1 img {
    height: 100%;
    width: 100%;
-   position: relative;
 }
 /*section1 텍스트*/
 #section1 dl {
    position: absolute;
-   top: 650px;
+   top: 30px;
    padding-left: 70px;
 }
 #section1 .plus_btn {
-   top: 830px;
+   top:200px;
 }
 
 /*section2 FRESH COFFE*/
@@ -115,7 +164,7 @@ nav {
    /*모든 섹션에 relative를 줌.위에 text정렬은 absolute*/
 }
 #section2 .plus_btn {
-   top: 300px;
+   top: 280px;
 }
 
 #section2 img {
@@ -124,96 +173,122 @@ nav {
 /*section2 텍스트*/
 #section2 dl {
    position: absolute;
-   top: 70px;
+   top: 60px;
    padding-left: 70px;
 }
 
 /*section3,4 좌/우 사진 정렬*/
-#left {
+/* #left {
    float: left;
 }
 #right {
    float: right;
-}
+} */
 /*section3(left) : VARIOUS BEVERAGE*/
 /*section3(right) : SWEET PAIK'S CCINO*/
 
 #section3 {
    height: 400px;
    width: 100%;
-   position: relative;
+   display:flex;
+   flex-wrap:wrap;
+   position:relative;
 }
-#left {
-   background-image: url(./img/main_sec3.jpg);
-   /*배경이미지 비율 맞추기*/
-   background-size: cover;
-   height: 400px;
+#section3 .left{
+   background-image:url(./img/mmain_sec3.jpg);
+   background-repeat: no-repeat;
    width: 60%;
+   background-size:cover;
+   display:relative;
 }
-#right {
-   background-image: url(./img/main_sec4.jpg);
-   /*배경이미지 비율 맞추기*/
-   background-size: cover;
-   height: 400px;
+#section3 .right{
+   background-image:url(./img/mmain_sec4.jpg);
    width: 40%;
+   background-size:cover;
 }
 
 #section3 .plus_btn {
    position: absolute;
-   top: 250px;
+   top:250px;
 }
 /*section3 텍스트*/
 #section3 dl {
    position: absolute;
-   top: 70px;
+   top: 50px;
    padding-left: 70px;
 }
 
 /*section4*/
 #section4 {
-   position: relative;
-   height: 200px;
+   /* position: relative; */
+   height: 700px;
    width: 100%;
    display: flex;
+   flex-wrap:wrap;
    margin-top: 15px;
 }
-.box_right {
-   display: relative;
-}
+
 /*왼쪽 store/franchise 파란색 박스*/
-.box_right img {
-   position: absolute;
-   width: 850px;
-   height: 555px;
-   right: 0;
-}
-#store {
-   border: 2px solid rgb(13, 13, 79);
-   margin-left: 150px;
-   margin-bottom: 10px;
-   height: 270px;
-   width: 460px;
+.box_left{
+   height:550px;
+   width: 350px;
+   margin-left:150px;
+   margin-right:10px;
+   margin-bottom:30px;
 }
 #franchise {
    border: 2px solid rgb(13, 13, 79);
-   margin-left: 150px;
-   margin-bottom: 10px;
-   margin-top: 10px;
+   /* margin-left: 150px;
+   margin-bottom: 10px; */
+   margin-top: 40px;
    height: 270px;
+   width: 460px;
+   display:block;
    position: relative;
 }
-/*오른쪽 TASTY ICE CREAM DESSERT*/
-#section4 dl {
-   position: absolute;
-   top: 70px;
-   padding-left: 70px;
+/* franchise 위치와 크기 */
+.franchise-t {
+   padding-left: 40px;
+   padding-top: 30px;
+   font-size: 40px;
+   font-family: 'Noto Sans', sans-serif;
+   color: rgb(19, 19, 100);
 }
-#section4 .plus_btn {
-   position: absolute;
-   top: 450px;
-   left: 700px;
+.franchise-m {
+   padding-left: 40px;
+   padding-top: 5px;
 }
+.franchise-img {
+   position: absolute;
+   width: 175px;
+   right: 0;
+   bottom: 0;
+   padding-left:300px;
+}
+.franchiseStore-btn {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: white;
+   box-shadow: 2px 2px 2px 2px rgb(179, 179, 179, 0.2);
+   position: absolute;
+   bottom: 25px;
+   left: 40px;
+}
+.franchiseStore-img {
+   width: 25px;
+}
+
 /* store 크기와 위치 */
+#store {
+   border: 2px solid rgb(13, 13, 79);
+   /* margin-left: 150px;
+   margin-bottom: 10px; */
+   height: 270px;
+   width: 460px;
+   display:block;
+}
+
 .store-t {
    padding-left: 40px;
    padding-top: 30px;
@@ -241,63 +316,69 @@ nav {
    padding-left: 80px;
    padding-right: 16px;
 }
-/* franchise 위치와 크기 */
-.franchise-t {
-   padding-left: 40px;
-   padding-top: 30px;
-   font-size: 40px;
-   font-family: 'Noto Sans', sans-serif;
-   color: rgb(19, 19, 100);
+
+/*오른쪽 TASTY ICE CREAM DESSERT*/
+.box_right {
+   position: relative;
+   width: 750px;
+   height: 555px;
+   /* right: 0; */
+   /* display:block; */
+   background-image: url(./img/mmain_sec5.jpg);
+   background-size:cover;
+   margin-left:120px;
+   
 }
-.franchise-m {
-   padding-left: 40px;
-   padding-top: 5px;
+#section4 dl {
+   /* position: absolute;
+   top: 70px;*/
+   padding-left: 50px; 
+   padding-top:30px;
 }
-.franchise-img {
+#section4 .plus_btn {
    position: absolute;
-   width: 50%;
-   right: 0;
-   bottom: 0;
-}
-.franchiseStore-btn {
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   background-color: white;
-   box-shadow: 2px 2px 2px 2px rgb(179, 179, 179, 0.2);
-   position: absolute;
-   bottom: 40px;
+   top: 480px;
    left: 40px;
 }
-.franchiseStore-img {
-   width: 25px;
-}
+
 /*아래쪽 sns icon 위치 */
 #sns-info {
-   position: absolute;
+   /* position: absolute;
    top: 620px;
-   left: 600px;
+   left: 600px; */
+   display:flex;
+   /* justify-content: center; */
+   justify-content:center;
+   align-items: center;
+   margin-bottom:50px; 
+   flex-direction: column;
 }
 /* 아래쪽 sns 폰트 크기와 위치 */
+
 .sns-t {
-   font-size: 30px;
+   font-size: 25px;
+   font-weight:800;
+   padding-bottom:10px;
+   font-family: 'Nanum Myeongjo', serif;
 }
-.sns-m-box {
-   display: flex;
-}
+
 .sns-m {
    padding-right: 15px;
+   padding-top:20px;
 }
 .sns-border {
    border-top: 1px solid black;
    width: 50px;
    height: 2px;
-   margin-left: 100px;
-   margin-top: 30px;
+   margin:0 auto;
+   /* margin-left: 100px;*/
+   margin-top: 30px; 
 }
 .sns-ico-box {
-   padding-left: 75px;
-   margin-top: 25px;
+   /* padding-left: 75px;
+   margin-top: 25px; */
+   margin: 0 auto;
+   margin-top:20px;
 }
 .sns-ico {
    width: 35px;
@@ -305,17 +386,19 @@ nav {
 }
 
 footer {
-   position: absolute;
    position: relative;
-   bottom: -650px;
+   /* bottom: -650px; */
+   padding-bottom:50px;
    width: 100%;
    border-top: 3px solid rgb(255, 241, 52);
 }
 /* 로고와 바로가기 링크 */
 .footer-ico {
    width: 180px;
-   margin-left: 650px;
-   margin-top: 30px;
+   /*미디어 쿼리에는 margin-left보다 0 auto를 쓰는 것이 좋다/ */
+   display:flex;
+   margin: 0 auto;
+   margin-top: 20px;
 }
 .familySiteLink {
    border: 1px solid black;
@@ -325,6 +408,11 @@ footer {
    position: absolute;
    right: 150px;
    top: 30px;
+   background-color: white;
+}
+/*패밀리사이트 바로가기 리스트 숨김*/
+.family_list{
+   display:none;
 }
 /*footer에 적은 회사 정보 */
 .office-info {
@@ -332,7 +420,8 @@ footer {
    flex-wrap: wrap;
    justify-content: center;
    width: 600px;
-   padding-left: 450px;
+   /* padding-left: 450px; */
+   margin:0 auto;
    font-size: 13px;
    padding-top: 30px;
 }
@@ -344,4 +433,71 @@ footer {
    text-align: center;
    padding: 50px;
    font-size: 13px;
+}
+
+/*미디어쿼리*/
+@media screen and (max-width:1200px){
+   #logo{
+      position:absolute;
+      left:30px;
+      width:150px;
+   }
+   /*header에 로고 제외 안보이게*/
+   .ico{
+      display:none;
+   }
+   .media_hidden{
+      display:none;
+   }
+   .bar{
+      display:none;
+   }
+   /*넘치는 이미지 가리기*/
+   img{
+      overflow:hidden;
+   }
+   /*배너 이미지 변경 버튼 */
+   /* .button_container{
+      display:absolute;
+      top:1000px;
+   } */
+   .button_container{
+      color: rgb(203, 203, 203);
+      position: absolute;
+      top:260px;
+      left:150px;
+      /* margin:0 auto; */
+      z-index: 1000;
+      }
+   
+   /*section1*/
+   #section1 img{
+      height:300px;
+   }
+   #section2 img{
+      height:500px;
+   }
+   /* #section2 .plus_btn {
+      position: absolute;
+      top: 250px;
+      left:700px;
+   } */
+   /* #section3{
+      clear:both;
+   } */
+   #section3{
+      display:flex;
+      flex-wrap: wrap;
+   }
+   #section3 .plus_btn {
+      position: absolute;
+      top: 250px;
+   }
+   #section4 dl{
+      left:30px;
+   }
+   footer{
+      margin: 0 auto;
+      text-align: center;
+   }
 }

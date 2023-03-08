@@ -9,19 +9,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@900&display=swap" rel="stylesheet">
-
+  
 <link rel="stylesheet" href="./style.css"/>
+
 <title>빽다방</title>
 </head>
 <body>
   <header>
     <nav class="label">
       <div class="nav-top">
-            <a>더본코리아</a>
-            <div class="space">|</div>
-            <img src="./img/facebook-ico.png" class="ico"></img>
-            <img src="./img/insta-ico.png" class="ico"></img>
+            <a class="media_hidden" href="https://www.theborn.co.kr/" target="blank">더본코리아</a>
+            <div class="space media_hidden">|</div>
+            <!--sns-->
+            <a href="https://ko-kr.facebook.com/ipaikscoffee/" target="blank">
+              <img src="./img/facebook-ico.png" class="ico"></img></a>
+            <a href="https://www.instagram.com/paikscoffee_official/" target="blank">
+              <img src="./img/insta-ico.png" class="ico"></img></a>
       </div>
       <div class="nav-bar"> 
             <div><a><img src="./img/logo.png" id="logo"></img></a></div>
@@ -39,26 +46,34 @@
 
   </header>
     <!---배너 이미지(움직이면 이미지 변환)-->
-    <!-- <input type="radio" id="tab1" checked>
-    <input type="radio" id="tab2">
-    <input type="radio" id="tab3">
-    <input type="radio" id="tab4"> -->
-    <div class = "section">
-      <div class="slide">
-        <div class="slide-inner">
-          <a href="#"><img src="./img/bannerimg1.jpg"></img></a>
-          <!-- <a href="#"><img src="./img/bannerimg2.jpg"></img></a>
-          <a href="#"><img src="./img/bannerimg3.jpg"></img></a>
-          <a href="#"><img src="./img/bannerimg4.jpg"></img></a> -->
+      <div class="hidden">
+        <div class = "container">
+          <div class="inner">
+            <img src ="./img/bannerimg1.jpg">
+          </div>
+          <div class="inner">
+            <img src ="./img/bannerimg2.jpg">
+          </div>
+          <div class="inner">
+            <img src ="./img/bannerimg3.jpg">
+          </div>
+          <div class="inner">
+            <img src ="./img/bannerimg4.jpg">
+          </div>
         </div>
       </div>
-    </div>
+      <div class="button_container">
+        <button id="btn1"></button>
+        <button id="btn2"></button>
+        <button id="btn3"></button>
+        <button id="btn4"></button>
+      </div>  
 
     <!--section1 PAIK'S COFFEE STORY-->
    <div id = "section1">
         <img src="./img/main_sec1.jpg"/>
         <dl>
-          <dt>The Finest Quality Coffee Plants</dt>
+          <dt style="font-weight:1000">The Finest Quality Coffee Plants</dt>
           <dd>PAIK'S COFFEE STORY</dd>
           <div>균형잡힌 바디감으로 긴 여운을 
           남기는 빽다방 커피를 만나보세요.</div>
@@ -70,7 +85,7 @@
     <div id="section2">
         <img src="./img/main_sec2.jpg"/>
         <dl>
-          <dd>FRESH COFFE</dd>
+          <dd style="color:rgb(117, 74, 20)">FRESH COFFEE</dd>
           <div>신선한 뉴크롭 원두를 
             사용하여 <br>추출한 커피메뉴</div>
           <button class="sec2 plus_btn"><span>+</span></button>
@@ -78,18 +93,18 @@
     </div>
       <!--section3 VARIOUS BEVERAGE-->
     <div id="section3">
-      <div id="left">
+      <div class="left">
         <dl>
-          <dd>VARIOUS BEVERAGE</dd>
+          <dd style="color: rgb(20, 45, 103);">VARIOUS<br> BEVERAGE</dd>
           <div>에이드, 티, 주스 등 취향대로<br> 골라 먹는 즐거움</div>
           <button class="sec3 plus_btn"><span>+</span><button>
         </dl>
       </div>
       <!--section3 SWEET PAIK'S CCINO-->
-      <div id = "right">
+      <div class="right">
         <dl>
-          <dd>SWEET PAIK'S CCINO</dd>
-          <div>달콤 시원한 빽다방 시그니처 메뉴!</div>
+          <dd style="color:rgb(231, 161, 80)">SWEET<br> PAIK'S CCINO</dd>
+          <div>달콤 시원한 빽다방 <br>시그니처 메뉴!</div>
           <button class="sec3 plus_btn"><span>+</span><button>
         </dl>
       </div>
@@ -97,7 +112,7 @@
   </main>
   <div id="section4">
     <!--STORE-->
-    <div class="box_left">
+      <div class="box_left">
           <div id="store">
             <div class="store-t">STORE</div>
             <div class="store-m">원하는 지역의 매장을 검색해보세요!</div>
@@ -105,8 +120,6 @@
               <input type="text" placeholder="Find a store in your area!">
               <img src="./img/search-ico.png">
             </div>
-          </div>
-
       <!--FRANCHISE-->
           <div id="franchise">
             <div class="franchise-t">FRANCHISE</div>
@@ -115,32 +128,51 @@
             <img src="./img/main_sec6.png" class="franchise-img">
           </div>
       </div>
+    </div>
     <div class="box_right">
-      <img src="./img/mmain_sec5.jpg">
+      <!-- <img src="./img/mmain_sec5.jpg"> -->
       <dl>
-        <dd>TASTY ICE CREAM / <br>DESSERT</dd>
+        <dd style="color:white">TASTY <br>ICE CREAM / <br>DESSERT</dd>
         <div>달콤한 아이스크림부터 <br>든든한 브레드까지!</div>
       </dl>
       <button class="sec plus_btn"><span>+</span></button>
     </div>
+  </div>
+  <div id="section5">
     <div id="sns-info">
       <div class="sns-t">PAIK’S COFFEE SNS</div>
       <div class="sns-m-box">
-        <div class="sns-m">#빽다방</div>
-        <div class="sns-m">#빽다방신메뉴</div>
-        <div class="sns-m">#빽다방이벤트</div>
+        <span class="sns-m">#빽다방</span>
+        <span class="sns-m">#빽다방신메뉴</span>
+        <span class="sns-m">#빽다방이벤트</span>
       </div>
       <div class="sns-border"></div>
       <div class="sns-ico-box">
-        <a><img src="./img/facebook-ico.png" class="sns-ico"></img></a>
-        <a><img src="./img/insta-ico.png" class="sns-ico"></img></a>
+        <a href="https://ko-kr.facebook.com/ipaikscoffee/" target="blank"><img src="./img/facebook-ico.png" class="sns-ico"></img></a>
+        <a href="https://www.instagram.com/paikscoffee_official/" target="blank"><img src="./img/insta-ico.png" class="sns-ico"></img></a>
       </div>
-    </div>
   </div>
 
   <footer>
-    <a><img src="./img/flogo.png" class="footer-ico"></a>
-    <a class="familySiteLink">패밀리 사이트 바로가기</a>
+    <a href="https://www.theborn.co.kr/" target="blank"><img src="./img/flogo.png" class="footer-ico"></a>
+    <button class="familySiteLink"> 패밀리 사이트 바로가기</button>
+      <ul class="family_list">
+        <li>더본코리아</li>
+        <li>창업센터</li>
+        <li>새마을식당</li>
+        <li>한신포차</li>
+        <li>역전우동</li>
+        <li>백스비어</li>
+        <li>롤링파스타</li>
+        <li>인생설렁탕</li>
+        <li>미정국수</li>
+        <li>리춘식당</li>
+        <li>원조쌈밥집</li>
+        <li>돌배기집</li>
+        <li>백철판</li>
+        <li>호텔더본</li>
+      </ul>
+    </div>
     <div class="office-info">
       <div>(주)더본코리아</div>
       <div>|</div>
@@ -158,6 +190,6 @@
     </div>
     <div class="office-born">COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</div>
   </footer>
-    
+  <script src="./뺵다방.js"></script>
 </body>
 </html>
