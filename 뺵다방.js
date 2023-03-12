@@ -6,6 +6,7 @@ const button2 = document.querySelector('#btn2');
 const button3 = document.querySelector('#btn3');
 const button4 = document.querySelector('#btn4');
 const bannerContainer = document.querySelector('.container');
+const siteLinkButton = document.querySelector('.familySiteLink');
 
 button2.addEventListener('click', function () {
    bannerContainer.style.transform = 'translate(-100vw)';

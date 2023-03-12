@@ -39,9 +39,7 @@ dl div {
    border-radius: 50%;
    height: 50px;
    width: 50px;
-   /* text-align: center; */
    left: 70px;
-   /*버튼 그림자 속성*/
    box-shadow: 2px 2px 2px 2px rgb(179, 179, 179, 0.2);
 }
 .plus_btn span {
@@ -109,16 +107,19 @@ nav {
 .container {
    width: 400vw;
    transition: transform 0.5s;
+   position:relative;
 }
 /* .banner{
    /* position:relative; */
 .button_container {
    color: rgb(208, 208, 208);
    position: absolute;
-   top: 500px;
-   left: 650px;
+   top:560px;
+   left: 50%;
    /* margin:0 auto; */
-   z-index: 1000;
+   z-index: 10;
+   width:200px;
+   height:20px;
 }
 
 .button_container button {
@@ -127,6 +128,7 @@ nav {
    width: 10px;
    margin: 10px;
    color: white;
+   z-index: 100;
 }
 
 .hidden {
@@ -141,13 +143,15 @@ nav {
 }
 /*section1 PAIK'S COFFEE STORY*/
 #section1 {
-   height: 300px;
+   height:300px;
    position: relative;
+   display:block;
+   overflow: hidden;
 }
-#section1 img {
-   height: 100%;
-   width: 100%;
+#section1 img{
+   height:300px;
 }
+
 /*section1 텍스트*/
 #section1 dl {
    position: absolute;
@@ -160,7 +164,10 @@ nav {
 
 /*section2 FRESH COFFE*/
 #section2 {
+   display:block;
    position: relative;
+   overflow:hidden;
+   height:100%;
    /*모든 섹션에 relative를 줌.위에 text정렬은 absolute*/
 }
 #section2 .plus_btn {
@@ -169,6 +176,10 @@ nav {
 
 #section2 img {
    width: 100%;
+   transition: all 0.2s linear;
+}
+#section2 img:hover{
+   transform: scale(1.1);
 }
 /*section2 텍스트*/
 #section2 dl {
@@ -178,17 +189,10 @@ nav {
 }
 
 /*section3,4 좌/우 사진 정렬*/
-/* #left {
-   float: left;
-}
-#right {
-   float: right;
-} */
-/*section3(left) : VARIOUS BEVERAGE*/
-/*section3(right) : SWEET PAIK'S CCINO*/
+
 
 #section3 {
-   height: 400px;
+   height: 500px;
    width: 100%;
    display: flex;
    flex-wrap: wrap;
@@ -209,7 +213,7 @@ nav {
 
 #section3 .plus_btn {
    position: absolute;
-   top: 250px;
+   top: 300px;
 }
 /*section3 텍스트*/
 #section3 dl {
@@ -232,7 +236,7 @@ nav {
 .box_left {
    height: 550px;
    width: 350px;
-   margin-left: 150px;
+   margin-left: 130px;
    margin-right: 10px;
    margin-bottom: 30px;
 }
@@ -320,13 +324,14 @@ nav {
 /*오른쪽 TASTY ICE CREAM DESSERT*/
 .box_right {
    position: relative;
-   width: 750px;
+   width: 60%;
    height: 555px;
    /* right: 0; */
    /* display:block; */
    background-image: url(./img/mmain_sec5.jpg);
    background-size: cover;
    margin-left: 120px;
+   display:block;
 }
 #section4 dl {
    /* position: absolute;
@@ -339,7 +344,9 @@ nav {
    top: 480px;
    left: 40px;
 }
-
+#section5{
+   height:300px;
+}
 /*아래쪽 sns icon 위치 */
 #sns-info {
    /* position: absolute;
@@ -389,6 +396,7 @@ footer {
    /* bottom: -650px; */
    padding-bottom: 50px;
    width: 100%;
+   height:300px;
    border-top: 3px solid rgb(255, 241, 52);
 }
 /* 로고와 바로가기 링크 */
@@ -413,9 +421,10 @@ footer {
 .family_list {
    /* display: none; */
    padding: 0 5px;
-   position: absolute;
+   /* position: absolute;
    bottom: 92px;
-   right: 150px;
+   right: 150px; */
+   display:block;
    background: #fff;
    border: 1px solid #262626;
    width: 167px;
@@ -477,7 +486,7 @@ footer {
 }
 
 /*미디어쿼리*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
    #logo {
       position: absolute;
       left: 30px;
@@ -498,17 +507,9 @@ footer {
       overflow: hidden;
    }
    /*배너 이미지 변경 버튼 */
-   /* .button_container{
+   .button_container{
       display:absolute;
-      top:1000px;
-   } */
-   .button_container {
-      color: rgb(203, 203, 203);
-      position: absolute;
-      top: 260px;
-      left: 150px;
-      /* margin:0 auto; */
-      z-index: 1000;
+      top:300px;
    }
 
    /*section1*/
@@ -516,29 +517,56 @@ footer {
       height: 300px;
    }
    #section2 img {
-      height: 500px;
+      height: 300px;
+
    }
-   /* #section2 .plus_btn {
+   #section2 .plus_btn {
       position: absolute;
-      top: 250px;
-      left:700px;
-   } */
+      top: 150px;
+   }
    /* #section3{
       clear:both;
    } */
    #section3 {
       display: flex;
       flex-wrap: wrap;
+      margin-bottom:150px;
    }
    #section3 .plus_btn {
       position: absolute;
-      top: 250px;
+      top: 170px;
    }
-   #section4 dl {
+   /* #section4 dl {
       left: 30px;
+   } */
+   #section3 .left {
+   width:100%;
+   height:300px;
+   }
+   #section3 .right {
+      width:100%;
+      height:300px;
+      position: relative;
+      }
+   #section3 .right dl{
+      position:absolute;
+      top:10px;
+   
+   }
+   .box_right{
+      /* margin-right:50px; */
+      margin-left:0;
+      width: 100%;
+   }
+   #section5{
+      margin-top:500px;
+   }
+   .familySiteLink{
+      display:none;
    }
    footer {
       margin: 0 auto;
+      padding-top:10px;
       text-align: center;
    }
 }
